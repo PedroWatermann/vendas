@@ -1,0 +1,24 @@
+CREATE TABLE [dbo].[ItensVendidos] (
+    [Id]         INT IDENTITY (1, 1) NOT NULL,
+    [id_venda]   INT NULL,
+    [id_produto] INT NULL,
+    [quantidade] INT NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[Produto] (
+    [Id]         INT             IDENTITY (1, 1) NOT NULL,
+    [nome]       VARCHAR (150)   NULL,
+    [quantidade] INT             NULL,
+    [preco]      DECIMAL (18, 2) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+CREATE TABLE [dbo].[Produto] (
+    [Id]         INT             IDENTITY (1, 1) NOT NULL,
+    [nome]       VARCHAR (150)   NULL,
+    [quantidade] INT             NULL,
+    [preco]      DECIMAL (18, 2) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
