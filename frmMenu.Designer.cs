@@ -60,7 +60,7 @@
             // 
             // cadastroToolStripMenuItem
             // 
-            this.cadastroToolStripMenuItem.BackColor = System.Drawing.Color.Black;
+            this.cadastroToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.cadastroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.produtosToolStripMenuItem,
             this.usuáriosToolStripMenuItem});
@@ -152,6 +152,7 @@
             // btnFechar
             // 
             this.btnFechar.AutoSize = true;
+            this.btnFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFechar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnFechar.FlatAppearance.BorderSize = 2;
             this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
@@ -162,6 +163,7 @@
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(75, 30);
             this.btnFechar.TabIndex = 8;
+            this.btnFechar.TabStop = false;
             this.btnFechar.Text = "Fechar";
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);

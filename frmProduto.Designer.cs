@@ -55,10 +55,10 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::vendas.Properties.Resources.exit_white_20;
-            this.button1.Location = new System.Drawing.Point(293, 315);
+            this.button1.Location = new System.Drawing.Point(290, 315);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(78, 30);
-            this.button1.TabIndex = 0;
+            this.button1.TabIndex = 8;
             this.button1.Text = "Voltar";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -80,7 +80,7 @@
             this.txtId.Location = new System.Drawing.Point(12, 28);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(85, 22);
-            this.txtId.TabIndex = 2;
+            this.txtId.TabIndex = 0;
             // 
             // dgvProduto
             // 
@@ -92,7 +92,7 @@
             this.dgvProduto.Name = "dgvProduto";
             this.dgvProduto.ReadOnly = true;
             this.dgvProduto.Size = new System.Drawing.Size(356, 158);
-            this.dgvProduto.TabIndex = 4;
+            this.dgvProduto.TabIndex = 7;
             // 
             // label2
             // 
@@ -120,14 +120,14 @@
             this.txtNome.Location = new System.Drawing.Point(12, 75);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(200, 22);
-            this.txtNome.TabIndex = 7;
+            this.txtNome.TabIndex = 0;
             // 
             // txtQuantidade
             // 
             this.txtQuantidade.Location = new System.Drawing.Point(12, 122);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(85, 22);
-            this.txtQuantidade.TabIndex = 9;
+            this.txtQuantidade.TabIndex = 1;
             // 
             // label4
             // 
@@ -145,7 +145,7 @@
             this.txtPreco.Location = new System.Drawing.Point(112, 122);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(100, 22);
-            this.txtPreco.TabIndex = 11;
+            this.txtPreco.TabIndex = 2;
             // 
             // label5
             // 
@@ -169,7 +169,7 @@
             this.btnInserir.Location = new System.Drawing.Point(283, 9);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(85, 30);
-            this.btnInserir.TabIndex = 12;
+            this.btnInserir.TabIndex = 4;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInserir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -187,7 +187,7 @@
             this.btnEditar.Location = new System.Drawing.Point(283, 62);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(85, 30);
-            this.btnEditar.TabIndex = 13;
+            this.btnEditar.TabIndex = 5;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -204,7 +204,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(283, 114);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(85, 30);
-            this.btnExcluir.TabIndex = 14;
+            this.btnExcluir.TabIndex = 6;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = false;
@@ -220,7 +220,7 @@
             this.btnLocalizar.Location = new System.Drawing.Point(112, 25);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(100, 30);
-            this.btnLocalizar.TabIndex = 16;
+            this.btnLocalizar.TabIndex = 3;
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLocalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

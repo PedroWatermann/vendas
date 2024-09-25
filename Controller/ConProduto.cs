@@ -13,7 +13,7 @@ namespace vendas.Controller
 {
     internal class ConProduto
     {
-        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Aluno\\source\\repos\\PedroWatermann\\vendas\\dbVenda.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\pedro\\source\\repos\\PedroWatermann\\vendas\\dbVenda.mdf;Integrated Security=True");
         Produto produto = new Produto();
 
         public List<Produto> ListaProduto() // List<prototipagem(int, string, etc., ou um model)>
