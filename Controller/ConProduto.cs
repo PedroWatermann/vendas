@@ -16,7 +16,7 @@ namespace vendas.Controller
         SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Aluno\\source\\repos\\PedroWatermann\\vendas\\dbVenda.mdf;Integrated Security=True");
         Produto produto = new Produto();
 
-        public List<Produto> listaProduto() // List<prototipagem(int, string, etc., ou um model)>
+        public List<Produto> ListaProduto() // List<prototipagem(int, string, etc., ou um model)>
         {
             List<Produto> li = new List<Produto>();
             string sql = "SELECT * FROM Produto";
@@ -29,6 +29,7 @@ namespace vendas.Controller
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
+                Produto produto = new Produto();
                 produto.Id = (int)dr["Id"];
                 produto.nome = dr["nome"].ToString();
                 produto.quantidade = (int)dr["quantidade"];
@@ -40,7 +41,7 @@ namespace vendas.Controller
             return li;
         }
 
-        public void inserir(string nome, string quantidade, string preco)
+        public void Inserir(string nome, int quantidade, string preco)
         {
             try
             {
@@ -62,7 +63,7 @@ namespace vendas.Controller
             }
         }
 
-        public void atualizar(int Id, string nome, int quantidade, string preco)
+        public void Atualizar(int Id, string nome, int quantidade, string preco)
         {
             try
             {
@@ -84,7 +85,7 @@ namespace vendas.Controller
             }
         }
 
-        public void excluir(int Id)
+        public void Excluir(int Id)
         {
             try
             {
@@ -104,7 +105,7 @@ namespace vendas.Controller
             }
         }
 
-        public void localizar(int Id)
+        public void Localizar(int Id)
         {
             string sql = $"SELECT * FROM Produto WHERE Id = '{Id}'";
             if (con.State == ConnectionState.Open)
@@ -124,7 +125,7 @@ namespace vendas.Controller
             con.Close();
         }
 
-        public bool registroRepetido(string nome)
+        public bool RegistroRepetido(string nome)
         {
             string sql = $"SELECT * FROM Produto WHERE nome = '{nome}'";
             if (con.State == ConnectionState.Open)
