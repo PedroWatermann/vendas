@@ -132,6 +132,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>dbVenda.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\vendas_white_1001.png" />
     <None Include="Resources\user_white_100.png" />
     <None Include="Resources\user_white_20.png" />
     <None Include="Resources\sale-white_20.png" />

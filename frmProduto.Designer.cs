@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProduto));
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.dgvProduto = new System.Windows.Forms.DataGridView();
@@ -39,31 +39,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtPreco = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnInserir = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.btnLocalizar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::vendas.Properties.Resources.exit_white_20;
-            this.button1.Location = new System.Drawing.Point(290, 315);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 30);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Voltar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -158,23 +140,38 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Preço (R$):";
             // 
-            // btnInserir
+            // btnLocalizar
             // 
-            this.btnInserir.AutoSize = true;
-            this.btnInserir.BackColor = System.Drawing.Color.Transparent;
-            this.btnInserir.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnInserir.FlatAppearance.BorderSize = 2;
-            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInserir.Image = global::vendas.Properties.Resources.insert_white_20;
-            this.btnInserir.Location = new System.Drawing.Point(283, 9);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(85, 30);
-            this.btnInserir.TabIndex = 4;
-            this.btnInserir.Text = "Inserir";
-            this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnInserir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInserir.UseVisualStyleBackColor = false;
-            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
+            this.btnLocalizar.AutoSize = true;
+            this.btnLocalizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnLocalizar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLocalizar.FlatAppearance.BorderSize = 2;
+            this.btnLocalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLocalizar.Image = global::vendas.Properties.Resources.search_white_20;
+            this.btnLocalizar.Location = new System.Drawing.Point(112, 25);
+            this.btnLocalizar.Name = "btnLocalizar";
+            this.btnLocalizar.Size = new System.Drawing.Size(100, 30);
+            this.btnLocalizar.TabIndex = 3;
+            this.btnLocalizar.Text = "Localizar";
+            this.btnLocalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLocalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLocalizar.UseVisualStyleBackColor = false;
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.AutoSize = true;
+            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
+            this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExcluir.FlatAppearance.BorderSize = 2;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Image = global::vendas.Properties.Resources.delete_white_20;
+            this.btnExcluir.Location = new System.Drawing.Point(283, 114);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(85, 30);
+            this.btnExcluir.TabIndex = 6;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExcluir.UseVisualStyleBackColor = false;
             // 
             // btnEditar
             // 
@@ -193,38 +190,42 @@
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
             // 
-            // btnExcluir
+            // btnInserir
             // 
-            this.btnExcluir.AutoSize = true;
-            this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
-            this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnExcluir.FlatAppearance.BorderSize = 2;
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Image = global::vendas.Properties.Resources.delete_white_20;
-            this.btnExcluir.Location = new System.Drawing.Point(283, 114);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(85, 30);
-            this.btnExcluir.TabIndex = 6;
-            this.btnExcluir.Text = "Excluir";
-            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnInserir.AutoSize = true;
+            this.btnInserir.BackColor = System.Drawing.Color.Transparent;
+            this.btnInserir.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnInserir.FlatAppearance.BorderSize = 2;
+            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInserir.Image = global::vendas.Properties.Resources.insert_white_20;
+            this.btnInserir.Location = new System.Drawing.Point(283, 9);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(85, 30);
+            this.btnInserir.TabIndex = 4;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnInserir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInserir.UseVisualStyleBackColor = false;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
-            // btnLocalizar
+            // button1
             // 
-            this.btnLocalizar.AutoSize = true;
-            this.btnLocalizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnLocalizar.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnLocalizar.FlatAppearance.BorderSize = 2;
-            this.btnLocalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLocalizar.Image = global::vendas.Properties.Resources.search_white_20;
-            this.btnLocalizar.Location = new System.Drawing.Point(112, 25);
-            this.btnLocalizar.Name = "btnLocalizar";
-            this.btnLocalizar.Size = new System.Drawing.Size(100, 30);
-            this.btnLocalizar.TabIndex = 3;
-            this.btnLocalizar.Text = "Localizar";
-            this.btnLocalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnLocalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLocalizar.UseVisualStyleBackColor = false;
+            this.button1.AutoSize = true;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::vendas.Properties.Resources.exit_white_20;
+            this.button1.Location = new System.Drawing.Point(290, 315);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 30);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Voltar";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmProduto
             // 
@@ -250,6 +251,7 @@
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

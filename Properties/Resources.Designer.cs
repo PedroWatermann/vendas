@@ -111,6 +111,26 @@ namespace vendas.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Byte[].
+        /// </summary>
+        internal static byte[] icon_product_white_70 {
+            get {
+                object obj = ResourceManager.GetObject("icon_product_white_70", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Byte[].
+        /// </summary>
+        internal static byte[] icon_vendas_white_70 {
+            get {
+                object obj = ResourceManager.GetObject("icon_vendas_white_70", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap insert_white_20 {
@@ -186,6 +206,16 @@ namespace vendas.Properties {
         internal static System.Drawing.Bitmap user_white_20 {
             get {
                 object obj = ResourceManager.GetObject("user_white_20", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vendas_white_100 {
+            get {
+                object obj = ResourceManager.GetObject("vendas_white_100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

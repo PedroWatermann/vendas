@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -35,13 +36,13 @@
             this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbxProduto = new System.Windows.Forms.PictureBox();
-            this.pbxVendas = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.pbxVendas = new System.Windows.Forms.PictureBox();
+            this.pbxProduto = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxVendas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProduto)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -73,7 +74,7 @@
             this.produtosToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.produtosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.produtosToolStripMenuItem.Text = "Produtos";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
@@ -82,7 +83,7 @@
             this.usuáriosToolStripMenuItem.BackColor = System.Drawing.Color.Black;
             this.usuáriosToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.usuáriosToolStripMenuItem.Text = "Usuários";
             // 
             // vendasToolStripMenuItem
@@ -110,32 +111,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Produtos";
             this.label1.Click += new System.EventHandler(this.pbxProduto_Click);
-            // 
-            // pbxProduto
-            // 
-            this.pbxProduto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxProduto.Image = global::vendas.Properties.Resources.product_white_100;
-            this.pbxProduto.Location = new System.Drawing.Point(33, 87);
-            this.pbxProduto.Name = "pbxProduto";
-            this.pbxProduto.Size = new System.Drawing.Size(150, 150);
-            this.pbxProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbxProduto.TabIndex = 4;
-            this.pbxProduto.TabStop = false;
-            this.pbxProduto.Click += new System.EventHandler(this.pbxProduto_Click);
-            // 
-            // pbxVendas
-            // 
-            this.pbxVendas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxVendas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxVendas.Image = global::vendas.Properties.Resources.sale_white_100;
-            this.pbxVendas.Location = new System.Drawing.Point(209, 87);
-            this.pbxVendas.Name = "pbxVendas";
-            this.pbxVendas.Size = new System.Drawing.Size(150, 150);
-            this.pbxVendas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pbxVendas.TabIndex = 5;
-            this.pbxVendas.TabStop = false;
-            this.pbxVendas.Click += new System.EventHandler(this.pbxVendas_Click);
             // 
             // label2
             // 
@@ -168,6 +143,32 @@
             this.btnFechar.UseVisualStyleBackColor = true;
             this.btnFechar.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // pbxVendas
+            // 
+            this.pbxVendas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxVendas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxVendas.Image = global::vendas.Properties.Resources.vendas_white_100;
+            this.pbxVendas.Location = new System.Drawing.Point(209, 87);
+            this.pbxVendas.Name = "pbxVendas";
+            this.pbxVendas.Size = new System.Drawing.Size(150, 150);
+            this.pbxVendas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbxVendas.TabIndex = 5;
+            this.pbxVendas.TabStop = false;
+            this.pbxVendas.Click += new System.EventHandler(this.pbxVendas_Click);
+            // 
+            // pbxProduto
+            // 
+            this.pbxProduto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbxProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbxProduto.Image = global::vendas.Properties.Resources.product_white_100;
+            this.pbxProduto.Location = new System.Drawing.Point(33, 87);
+            this.pbxProduto.Name = "pbxProduto";
+            this.pbxProduto.Size = new System.Drawing.Size(150, 150);
+            this.pbxProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbxProduto.TabIndex = 4;
+            this.pbxProduto.TabStop = false;
+            this.pbxProduto.Click += new System.EventHandler(this.pbxProduto_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
@@ -183,14 +184,15 @@
             this.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendas";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxProduto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxVendas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxProduto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
