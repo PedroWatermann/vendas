@@ -13,7 +13,12 @@ namespace vendas.Controller
 {
     internal class ConProduto
     {
-        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\pedro\\source\\repos\\PedroWatermann\\vendas\\dbVenda.mdf;Integrated Security=True");
+        public int Id { get; set; }
+        public string nome { get; set; }
+        public int quantidade { get; set; }
+        public decimal preco { get; set; }
+
+        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Aluno\\source\\repos\\PedroWatermann\\vendas\\dbVenda.mdf;Integrated Security=True");
         Produto produto = new Produto();
 
         public List<Produto> ListaProduto() // List<prototipagem(int, string, etc., ou um model)>
@@ -45,7 +50,7 @@ namespace vendas.Controller
         {
             try
             {
-                decimal precoFinal = Convert.ToDecimal(preco) / 100; // Converte preco para decimal
+                decimal precoFinal = Convert.ToDecimal(preco) /* 100*/; // Converte preco para decimal
                 string sql = $"INSERT INTO Produto (nome, quantidade, preco) VALUES ('{nome}', '{quantidade}', @preco)"; // @preco: alias => apelido
                 if (con.State == ConnectionState.Open)
                 {
@@ -67,7 +72,7 @@ namespace vendas.Controller
         {
             try
             {
-                decimal precoFinal = Convert.ToDecimal(preco) / 100;
+                decimal precoFinal = Convert.ToDecimal(preco) /* 100*/;
                 string sql = $"UPDATE Produto SET nome = '{nome}', quantidade = '{quantidade}', preco = @preco WHERE Id = '{Id}'";
                 if (con.State == ConnectionState.Open)
                 {
@@ -117,9 +122,9 @@ namespace vendas.Controller
             SqlDataReader dr = cmd.ExecuteReader();
             while (dr.Read())
             {
-                produto.nome = dr["nome"].ToString();
-                produto.quantidade = (int)dr["quantidade"];
-                produto.preco = (decimal)dr["preco"];
+                nome = dr["nome"].ToString();
+                quantidade = (int)dr["quantidade"];
+                preco = (decimal)dr["preco"];
             }
             dr.Close();
             con.Close();

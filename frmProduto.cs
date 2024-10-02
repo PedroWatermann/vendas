@@ -23,8 +23,6 @@ namespace vendas
         {
             btnEditar.Enabled = value;
             btnExcluir.Enabled = value;
-            btnLocalizar.Enabled = value;
-            txtId.Enabled = value;
         }
 
         private void ClearFields()
@@ -90,6 +88,135 @@ namespace vendas
             {
                 MessageBox.Show(er.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtId.Text == string.Empty)
+                {
+                    MessageBox.Show("Por favor, digite um Id válido!", "Localizar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    this.ActiveControl = txtId;
+                    return;
+                }
+                else
+                {
+                    ConProduto conProduto = new ConProduto();
+                    int Id = Convert.ToInt32(txtId.Text.Trim());
+                    conProduto.Localizar(Id);
+                    txtNome.Text = conProduto.nome;
+                    txtPreco.Text = Convert.ToString(conProduto.preco);
+                    txtQuantidade.Text = Convert.ToString(conProduto.quantidade);
+                    btnEditar.Enabled = true;
+                    btnExcluir.Enabled = true;
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtId.Text == string.Empty || txtNome.Text == string.Empty || txtQuantidade.Text == string.Empty || txtPreco.Text == string.Empty)
+                {
+                    MessageBox.Show($"Por favor, preencha todos os campos!", "Campo Obrigatório", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    int Id = Convert.ToInt32(txtId.Text.Trim());
+                    int quntidade = Convert.ToInt32(txtQuantidade.Text.Trim());
+                    ConProduto conProduto = new ConProduto();
+                    conProduto.Atualizar(Id, txtNome.Text, quntidade, txtPreco.Text);
+                    MessageBox.Show("Produto atualizado com sucesso!", "Atualização", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    List<Produto> produtos = conProduto.ListaProduto();
+                    dgvProduto.DataSource = produtos;
+
+                    txtId.Text = string.Empty;
+                    txtNome.Text = string.Empty;
+                    txtPreco.Text = string.Empty;
+                    txtQuantidade.Text = string.Empty;
+                    btnEditar.Enabled = false;
+                    btnExcluir.Enabled = false;
+                    this.ActiveControl = txtNome;
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtId.Text == string.Empty)
+                {
+                    MessageBox.Show($"Por favor, preencha um Id válido!", "Id", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    string produto = txtNome.Text;
+                    DialogResult resultado = MessageBox.Show($"Deseja mesmo excluir o produto {produto}?", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (resultado == DialogResult.Yes)
+                    {
+                        int Id = Convert.ToInt32(txtId.Text.Trim());
+
+                        ConProduto conProduto = new ConProduto();
+                        conProduto.Excluir(Id);
+
+                        MessageBox.Show("Produto excluído com sucesso!", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        List<Produto> produtos = conProduto.ListaProduto();
+                        dgvProduto.DataSource = produtos;
+
+                        txtId.Text = string.Empty;
+                        txtNome.Text = string.Empty;
+                        txtPreco.Text = string.Empty;
+                        txtQuantidade.Text = string.Empty;
+                        btnEditar.Enabled = false;
+                        btnExcluir.Enabled = false;
+                        this.ActiveControl = txtNome;
+                    }
+                }
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show(er.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void txtPreco_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '.')
+            {
+                MessageBox.Show("Apenas vírgula ( , ) é permitido!", "Tecla Pressionada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                e.KeyChar = ',';
+            }
+        }
+
+        private void dgvProduto_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dgvProduto.Rows[e.RowIndex];
+                this.dgvProduto.Rows[e.RowIndex].Selected = true;
+                txtId.Text = row.Cells[0].Value.ToString();
+                txtNome.Text = row.Cells[1].Value.ToString();
+                txtPreco.Text = row.Cells[3].Value.ToString();
+                txtQuantidade.Text = row.Cells[4].Value.ToString();
+            }
+            btnEditar.Enabled = true;
+            btnExcluir.Enabled = true;
         }
     }
 }

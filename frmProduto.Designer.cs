@@ -65,7 +65,7 @@
             // 
             this.txtId.Location = new System.Drawing.Point(12, 28);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(85, 22);
+            this.txtId.Size = new System.Drawing.Size(125, 22);
             this.txtId.TabIndex = 0;
             // 
             // dgvProduto
@@ -82,7 +82,7 @@
             this.dgvProduto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.NullValue = null;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -92,7 +92,7 @@
             this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -116,6 +116,7 @@
             this.dgvProduto.Size = new System.Drawing.Size(356, 158);
             this.dgvProduto.StandardTab = true;
             this.dgvProduto.TabIndex = 7;
+            this.dgvProduto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduto_CellClick);
             // 
             // label2
             // 
@@ -142,14 +143,14 @@
             // 
             this.txtNome.Location = new System.Drawing.Point(12, 75);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(200, 22);
+            this.txtNome.Size = new System.Drawing.Size(256, 22);
             this.txtNome.TabIndex = 0;
             // 
             // txtQuantidade
             // 
             this.txtQuantidade.Location = new System.Drawing.Point(12, 122);
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(85, 22);
+            this.txtQuantidade.Size = new System.Drawing.Size(125, 22);
             this.txtQuantidade.TabIndex = 1;
             // 
             // label4
@@ -165,16 +166,17 @@
             // 
             // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(112, 122);
+            this.txtPreco.Location = new System.Drawing.Point(143, 122);
             this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(100, 22);
+            this.txtPreco.Size = new System.Drawing.Size(125, 22);
             this.txtPreco.TabIndex = 2;
+            this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(112, 103);
+            this.label5.Location = new System.Drawing.Point(142, 103);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 16);
@@ -189,7 +191,7 @@
             this.btnLocalizar.FlatAppearance.BorderSize = 2;
             this.btnLocalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocalizar.Image = global::vendas.Properties.Resources.search_white_20;
-            this.btnLocalizar.Location = new System.Drawing.Point(112, 25);
+            this.btnLocalizar.Location = new System.Drawing.Point(145, 24);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(100, 30);
             this.btnLocalizar.TabIndex = 3;
@@ -197,6 +199,7 @@
             this.btnLocalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLocalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLocalizar.UseVisualStyleBackColor = false;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // btnExcluir
             // 
@@ -213,6 +216,7 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -230,6 +234,7 @@
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnInserir
             // 
