@@ -47,7 +47,7 @@
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(23, 16);
             this.label1.TabIndex = 1;
@@ -63,9 +63,10 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(12, 28);
+            this.txtId.Location = new System.Drawing.Point(12, 36);
+            this.txtId.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(125, 22);
+            this.txtId.Size = new System.Drawing.Size(130, 22);
             this.txtId.TabIndex = 0;
             // 
             // dgvProduto
@@ -100,7 +101,8 @@
             this.dgvProduto.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProduto.EnableHeadersVisualStyles = false;
             this.dgvProduto.GridColor = System.Drawing.Color.White;
-            this.dgvProduto.Location = new System.Drawing.Point(12, 150);
+            this.dgvProduto.Location = new System.Drawing.Point(12, 194);
+            this.dgvProduto.Margin = new System.Windows.Forms.Padding(3, 12, 3, 12);
             this.dgvProduto.Name = "dgvProduto";
             this.dgvProduto.ReadOnly = true;
             this.dgvProduto.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -113,7 +115,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvProduto.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProduto.RowHeadersVisible = false;
-            this.dgvProduto.Size = new System.Drawing.Size(356, 158);
+            this.dgvProduto.Size = new System.Drawing.Size(376, 149);
             this.dgvProduto.StandardTab = true;
             this.dgvProduto.TabIndex = 7;
             this.dgvProduto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduto_CellClick);
@@ -132,7 +134,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 56);
+            this.label3.Location = new System.Drawing.Point(12, 73);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 16);
@@ -141,23 +143,25 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(12, 75);
+            this.txtNome.Location = new System.Drawing.Point(12, 92);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(256, 22);
+            this.txtNome.Size = new System.Drawing.Size(270, 22);
             this.txtNome.TabIndex = 0;
             // 
             // txtQuantidade
             // 
-            this.txtQuantidade.Location = new System.Drawing.Point(12, 122);
+            this.txtQuantidade.Location = new System.Drawing.Point(12, 148);
+            this.txtQuantidade.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(125, 22);
+            this.txtQuantidade.Size = new System.Drawing.Size(130, 22);
             this.txtQuantidade.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 103);
+            this.label4.Location = new System.Drawing.Point(12, 129);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 16);
@@ -166,9 +170,10 @@
             // 
             // txtPreco
             // 
-            this.txtPreco.Location = new System.Drawing.Point(143, 122);
+            this.txtPreco.Location = new System.Drawing.Point(152, 148);
+            this.txtPreco.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.txtPreco.Name = "txtPreco";
-            this.txtPreco.Size = new System.Drawing.Size(125, 22);
+            this.txtPreco.Size = new System.Drawing.Size(130, 22);
             this.txtPreco.TabIndex = 2;
             this.txtPreco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPreco_KeyPress);
             // 
@@ -176,7 +181,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(142, 103);
+            this.label5.Location = new System.Drawing.Point(149, 129);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 16);
@@ -191,9 +196,9 @@
             this.btnLocalizar.FlatAppearance.BorderSize = 2;
             this.btnLocalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocalizar.Image = global::vendas.Properties.Resources.search_white_20;
-            this.btnLocalizar.Location = new System.Drawing.Point(145, 24);
+            this.btnLocalizar.Location = new System.Drawing.Point(171, 32);
             this.btnLocalizar.Name = "btnLocalizar";
-            this.btnLocalizar.Size = new System.Drawing.Size(100, 30);
+            this.btnLocalizar.Size = new System.Drawing.Size(111, 30);
             this.btnLocalizar.TabIndex = 3;
             this.btnLocalizar.Text = "Localizar";
             this.btnLocalizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -209,7 +214,8 @@
             this.btnExcluir.FlatAppearance.BorderSize = 2;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Image = global::vendas.Properties.Resources.delete_white_20;
-            this.btnExcluir.Location = new System.Drawing.Point(283, 114);
+            this.btnExcluir.Location = new System.Drawing.Point(303, 140);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(3, 3, 3, 12);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(85, 30);
             this.btnExcluir.TabIndex = 6;
@@ -226,7 +232,7 @@
             this.btnEditar.FlatAppearance.BorderSize = 2;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Image = global::vendas.Properties.Resources.edit_white_20;
-            this.btnEditar.Location = new System.Drawing.Point(283, 62);
+            this.btnEditar.Location = new System.Drawing.Point(303, 75);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(85, 30);
             this.btnEditar.TabIndex = 5;
@@ -244,7 +250,7 @@
             this.btnInserir.FlatAppearance.BorderSize = 2;
             this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserir.Image = global::vendas.Properties.Resources.insert_white_20;
-            this.btnInserir.Location = new System.Drawing.Point(283, 9);
+            this.btnInserir.Location = new System.Drawing.Point(303, 12);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(85, 30);
             this.btnInserir.TabIndex = 4;
@@ -254,31 +260,31 @@
             this.btnInserir.UseVisualStyleBackColor = false;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
-            // button1
+            // btnVoltar
             // 
-            this.button1.AutoSize = true;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::vendas.Properties.Resources.exit_white_20;
-            this.button1.Location = new System.Drawing.Point(290, 315);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 30);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Voltar";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnVoltar.AutoSize = true;
+            this.btnVoltar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnVoltar.FlatAppearance.BorderSize = 2;
+            this.btnVoltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
+            this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Image = global::vendas.Properties.Resources.exit_white_20;
+            this.btnVoltar.Location = new System.Drawing.Point(310, 358);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(78, 30);
+            this.btnVoltar.TabIndex = 8;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnVoltar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // frmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(380, 357);
+            this.ClientSize = new System.Drawing.Size(400, 400);
             this.Controls.Add(this.btnLocalizar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
@@ -293,10 +299,10 @@
             this.Controls.Add(this.dgvProduto);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnVoltar);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.MaximizeBox = false;
@@ -313,7 +319,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.DataGridView dgvProduto;

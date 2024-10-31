@@ -41,11 +41,6 @@ namespace vendas
             ButtonsState(false);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnInserir_Click(object sender, EventArgs e)
         {
             try
@@ -217,6 +212,11 @@ namespace vendas
             }
             btnEditar.Enabled = true;
             btnExcluir.Enabled = true;
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
