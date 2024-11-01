@@ -194,6 +194,7 @@
             this.btnInserir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnInserir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInserir.UseVisualStyleBackColor = false;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
             // txtTotal
             // 

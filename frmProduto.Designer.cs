@@ -194,6 +194,8 @@
             this.btnLocalizar.BackColor = System.Drawing.Color.Transparent;
             this.btnLocalizar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnLocalizar.FlatAppearance.BorderSize = 2;
+            this.btnLocalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
+            this.btnLocalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
             this.btnLocalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocalizar.Image = global::vendas.Properties.Resources.search_white_20;
             this.btnLocalizar.Location = new System.Drawing.Point(171, 32);

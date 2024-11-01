@@ -207,8 +207,8 @@ namespace vendas
                 this.dgvProduto.Rows[e.RowIndex].Selected = true;
                 txtId.Text = row.Cells[0].Value.ToString();
                 txtNome.Text = row.Cells[1].Value.ToString();
-                txtPreco.Text = row.Cells[3].Value.ToString();
-                txtQuantidade.Text = row.Cells[4].Value.ToString();
+                txtPreco.Text = row.Cells[2].Value.ToString();
+                txtQuantidade.Text = row.Cells[3].Value.ToString();
             }
             btnEditar.Enabled = true;
             btnExcluir.Enabled = true;
