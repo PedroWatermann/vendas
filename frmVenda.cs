@@ -19,7 +19,7 @@ namespace vendas
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Aluno\\source\\repos\\PedroWatermann\\vendas\\dbVenda.mdf;Integrated Security=True");
+        SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\pedro\\Source\\Repos\\PedroWatermann\\vendas\\dbVenda.mdf;Integrated Security=True");
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -141,7 +141,7 @@ namespace vendas
                 {
                     if (Convert.ToInt32(txtQuantidade.Text) > Convert.ToInt32(dr[2]))
                     {
-                        MessageBox.Show("Quantidade indisponível! \nDigite um valor menor", "Quantidade", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Quantidade indisponível! \nDigite um valor menor.", "Quantidade", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         txtQuantidade.Focus();
                         txtQuantidade.SelectAll();
                         return;

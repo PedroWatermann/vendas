@@ -194,8 +194,8 @@
             this.btnLocalizar.BackColor = System.Drawing.Color.Transparent;
             this.btnLocalizar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnLocalizar.FlatAppearance.BorderSize = 2;
-            this.btnLocalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSalmon;
-            this.btnLocalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
+            this.btnLocalizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnLocalizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.RoyalBlue;
             this.btnLocalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocalizar.Image = global::vendas.Properties.Resources.search_white_20;
             this.btnLocalizar.Location = new System.Drawing.Point(171, 32);
@@ -214,6 +214,8 @@
             this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
             this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnExcluir.FlatAppearance.BorderSize = 2;
+            this.btnExcluir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RosyBrown;
+            this.btnExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Image = global::vendas.Properties.Resources.delete_white_20;
             this.btnExcluir.Location = new System.Drawing.Point(303, 140);
@@ -232,6 +234,8 @@
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnEditar.FlatAppearance.BorderSize = 2;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Salmon;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Image = global::vendas.Properties.Resources.edit_white_20;
             this.btnEditar.Location = new System.Drawing.Point(303, 75);
@@ -250,6 +254,8 @@
             this.btnInserir.BackColor = System.Drawing.Color.Transparent;
             this.btnInserir.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnInserir.FlatAppearance.BorderSize = 2;
+            this.btnInserir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnInserir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserir.Image = global::vendas.Properties.Resources.insert_white_20;
             this.btnInserir.Location = new System.Drawing.Point(303, 12);

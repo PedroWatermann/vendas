@@ -125,8 +125,8 @@
             this.btnVenda.BackColor = System.Drawing.Color.Transparent;
             this.btnVenda.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnVenda.FlatAppearance.BorderSize = 2;
-            this.btnVenda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.IndianRed;
-            this.btnVenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnVenda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnVenda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVenda.ForeColor = System.Drawing.Color.White;
             this.btnVenda.Image = global::vendas.Properties.Resources.sale_white_20;
@@ -145,6 +145,8 @@
             this.btnExcluir.BackColor = System.Drawing.Color.Transparent;
             this.btnExcluir.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnExcluir.FlatAppearance.BorderSize = 2;
+            this.btnExcluir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RosyBrown;
+            this.btnExcluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.ForeColor = System.Drawing.Color.Transparent;
             this.btnExcluir.Image = global::vendas.Properties.Resources.delete_white_20;
@@ -163,6 +165,8 @@
             this.btnEditar.BackColor = System.Drawing.Color.Transparent;
             this.btnEditar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnEditar.FlatAppearance.BorderSize = 2;
+            this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Salmon;
+            this.btnEditar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.OrangeRed;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.Color.Transparent;
             this.btnEditar.Image = global::vendas.Properties.Resources.edit_white_20;
@@ -182,6 +186,8 @@
             this.btnInserir.BackColor = System.Drawing.Color.Transparent;
             this.btnInserir.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnInserir.FlatAppearance.BorderSize = 2;
+            this.btnInserir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnInserir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Green;
             this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserir.ForeColor = System.Drawing.Color.Transparent;
             this.btnInserir.Image = global::vendas.Properties.Resources.insert_white_20;
