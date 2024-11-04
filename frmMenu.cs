@@ -15,22 +15,10 @@ namespace vendas
         public frmMenu()
         {
             InitializeComponent();
-            menuStrip1.ForeColor = Color.White;
         }
 
-        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmProduto produto = new frmProduto();
-            produto.Show();
-        }
-
-        private void vendasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmVenda venda = new frmVenda();
-            venda.Show();
-        }
-
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        // Abre uma caixa de diálogo para confirmação e, caso sim, fecha a aplicação
+        private void btnFechar_Click(object sender, EventArgs e)
         {
             var fechar = MessageBox.Show("Deseja realmente sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (fechar == DialogResult.Yes)
@@ -39,16 +27,28 @@ namespace vendas
             }
         }
 
+        // Abre o form produdo quando o item é clicado
         private void pbxProduto_Click(object sender, EventArgs e)
         {
             frmProduto produto = new frmProduto();
-            produto.Show();
+            // Esconde este formulário
+            this.Hide();
+            // Abre o form de forma modal
+            produto.ShowDialog();
+            // Mostra este form após fechar o produto
+            this.Show();
         }
 
+        // Abre o form vendas quando o item é clicado
         private void pbxVendas_Click(object sender, EventArgs e)
         {
             frmVenda venda = new frmVenda();
-            venda.Show();
+            // Esconde este formulário
+            this.Hide();
+            // Abre o form de forma modal
+            venda.ShowDialog();
+            // Mostra este form após fechar o vendas
+            this.Show();
         }
     }
 }

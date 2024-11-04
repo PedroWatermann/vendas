@@ -48,6 +48,7 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -287,12 +288,37 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.AutoSize = true;
+            this.btnLimpar.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLimpar.FlatAppearance.BorderSize = 2;
+            this.btnLimpar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.btnLimpar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RosyBrown;
+            this.btnLimpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Image = global::vendas.Properties.Resources.clear_white_20;
+            this.btnLimpar.Location = new System.Drawing.Point(11, 356);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(139, 32);
+            this.btnLimpar.TabIndex = 13;
+            this.btnLimpar.Text = "Limpar campos";
+            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // frmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(400, 400);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnLocalizar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
@@ -316,7 +342,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmProduto";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Produto";
             this.Load += new System.EventHandler(this.frmProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
@@ -342,5 +368,6 @@
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnLocalizar;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }
