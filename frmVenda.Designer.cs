@@ -47,6 +47,7 @@
             this.txtQuantidade = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbxProduto = new System.Windows.Forms.ComboBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVenda)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,6 +100,7 @@
             this.dgvVenda.Size = new System.Drawing.Size(376, 161);
             this.dgvVenda.StandardTab = true;
             this.dgvVenda.TabIndex = 9;
+            this.dgvVenda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVenda_CellClick);
             // 
             // btnVoltar
             // 
@@ -109,9 +111,9 @@
             this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Image = global::vendas.Properties.Resources.exit_white_20;
-            this.btnVoltar.Location = new System.Drawing.Point(310, 358);
+            this.btnVoltar.Location = new System.Drawing.Point(310, 356);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(78, 30);
+            this.btnVoltar.Size = new System.Drawing.Size(78, 32);
             this.btnVoltar.TabIndex = 10;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -130,14 +132,15 @@
             this.btnVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVenda.ForeColor = System.Drawing.Color.White;
             this.btnVenda.Image = global::vendas.Properties.Resources.sale_white_20;
-            this.btnVenda.Location = new System.Drawing.Point(12, 358);
+            this.btnVenda.Location = new System.Drawing.Point(12, 356);
             this.btnVenda.Name = "btnVenda";
-            this.btnVenda.Size = new System.Drawing.Size(113, 30);
+            this.btnVenda.Size = new System.Drawing.Size(113, 32);
             this.btnVenda.TabIndex = 11;
             this.btnVenda.Text = "Finalizar Venda";
             this.btnVenda.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnVenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnVenda.UseVisualStyleBackColor = false;
+            this.btnVenda.Click += new System.EventHandler(this.btnVenda_Click);
             // 
             // btnExcluir
             // 
@@ -158,6 +161,7 @@
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnEditar
             // 
@@ -179,6 +183,7 @@
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnInserir
             // 
@@ -278,12 +283,37 @@
             this.cbxProduto.TabIndex = 23;
             this.cbxProduto.SelectedIndexChanged += new System.EventHandler(this.cbxProduto_SelectedIndexChanged);
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.AutoSize = true;
+            this.btnLimpar.BackColor = System.Drawing.Color.Transparent;
+            this.btnLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnLimpar.FlatAppearance.BorderSize = 2;
+            this.btnLimpar.FlatAppearance.CheckedBackColor = System.Drawing.Color.Black;
+            this.btnLimpar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.RosyBrown;
+            this.btnLimpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Brown;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Image = global::vendas.Properties.Resources.clear_white_20;
+            this.btnLimpar.Location = new System.Drawing.Point(147, 356);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(139, 32);
+            this.btnLimpar.TabIndex = 24;
+            this.btnLimpar.Text = "Limpar campos";
+            this.btnLimpar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
             // frmVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(400, 400);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.cbxProduto);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.label5);
@@ -327,5 +357,6 @@
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbxProduto;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }
